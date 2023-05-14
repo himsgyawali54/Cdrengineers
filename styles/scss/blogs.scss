@@ -1,0 +1,122 @@
+@import "mixin";
+html {
+  scroll-padding-top: 6rem;
+}
+.blogs-grid {
+  .card {
+    position: relative;
+  }
+  .card img {
+    border-top-right-radius: var(--border-radius-all);
+    border-top-left-radius: var(--border-radius-all);
+  }
+  .card .blog-date {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+  .card .blog-date i {
+    margin-right: 0.75rem;
+  }
+  .latest-blog {
+    background-color: var(--background-color-grey);
+  }
+  @media (min-width: 991px) {
+    .latest-blog .card {
+      width: 80%;
+      margin: auto;
+    }
+  }
+  .other-blogs {
+    @include row-align-center;
+  }
+
+  .other-blogs .card {
+    box-shadow: var(--card-box-shadow);
+  }
+  .other-blogs .card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+.single-post {
+  opacity: 1;
+  transition: none;
+  filter: blur(0px);
+  transform: translateY(0%);
+  h2 {
+    margin: 3rem 0 1rem;
+  }
+  h3 {
+    margin: 2.5rem 0 1rem;
+  }
+  img {
+    display: block;
+    margin: 0 auto 2rem;
+    @media (min-width: 991px) {
+      width: 75%;
+    }
+  }
+  .card {
+    box-shadow: var(--card-box-shadow);
+    margin-bottom: 2rem;
+    &:hover .styled-heading::after {
+      width: 120px;
+    }
+  }
+  .accordion.table-of-content {
+    // position: sticky;
+    margin-bottom: 1rem;
+    // overflow-y: auto;
+    top: 0;
+    .accordion-item {
+      .accordion-button {
+        font-size: var(--h2-font-size);
+        font-weight: 600;
+      }
+    }
+  }
+  table {
+    font-size: var(--h5-font-size);
+    margin: 1rem 0;
+    th {
+      font-weight: 500;
+    }
+  }
+  .col-lg-4 {
+    @media (min-width: 991px) {
+      position: sticky;
+      overflow-y: auto;
+      top: 7rem;
+      height: 90vh;
+      padding: 1px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .share-post {
+      text-align: center;
+      p {
+        text-align: center;
+      }
+      ol {
+        display: flex;
+        padding-left: 0;
+        justify-content: space-evenly;
+        list-style: none;
+        li {
+          font-size: 3rem;
+        }
+      }
+    }
+    .call-to-action-blog {
+      text-align: center;
+    }
+  }
+}
+section:hover .styled-heading::after {
+  width: 40px;
+}

@@ -1,0 +1,12 @@
+@mixin row-align-center {
+  .container > .row {
+    align-items: center;
+    justify-content: space-around;
+    --bs-gutter-x: 3rem;
+    --bs-gutter-y: 3rem;
+    @media (max-width: 576px) {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 1.5rem;
+    }
+  }
+}
