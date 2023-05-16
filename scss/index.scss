@@ -37,8 +37,9 @@
         &:nth-of-type(2) {
           background-color: #cf8bd4;
           top: 60px;
-          left: 160px;
+          left: 130px;
           animation-delay: 2s;
+
           @media (max-width: 1024px) {
             left: 100px;
           }
@@ -52,7 +53,7 @@
         &:last-of-type {
           background-color: #20b15a;
           top: 90px;
-          left: 400px;
+          left: 420px;
           animation-delay: 4s;
           @media (max-width: 1024px) {
             left: 300px;
