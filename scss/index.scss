@@ -39,6 +39,9 @@
           top: 60px;
           left: 160px;
           animation-delay: 2s;
+          @media (max-width: 1024px) {
+            left: 100px;
+          }
         }
         &:nth-of-type(3) {
           background-color: #ff8345;
@@ -49,8 +52,11 @@
         &:last-of-type {
           background-color: #20b15a;
           top: 90px;
-          left: 420px;
+          left: 400px;
           animation-delay: 4s;
+          @media (max-width: 1024px) {
+            left: 300px;
+          }
         }
         @media (max-width: 991px) {
           &:first-of-type {
@@ -109,14 +115,19 @@
   }
   .why-choose-us {
     @include row-align-center;
+
     .counter {
       p:has(span) {
         font-size: var(--h3-fontsize);
         font-weight: 500;
         color: var(--color-primary);
+        text-align: center;
         span {
           color: black;
         }
+      }
+      p {
+        text-align: center;
       }
     }
   }
@@ -131,12 +142,15 @@
               opacity 0.5s linear;
           }
           p {
-            font-size: var(--h5-fontsize);
+            font-size: 1.4rem;
+            margin-bottom: 0.3rem;
           }
           .btn-all {
-            font-size: var(--h5-fontsize);
+            font-size: var(--h6-fontsize);
             visibility: hidden;
             opacity: 0;
+            padding: 0.5rem 0.7rem;
+            font-weight: 400;
           }
           &:hover {
             h3 {
@@ -147,11 +161,22 @@
               opacity: 1;
             }
           }
+          .text-lg-center {
+            margin-top: 6rem;
+          }
+        }
+        .px-lg-5 {
+          margin-bottom: -5rem;
         }
         img {
           padding: 2rem;
           border: 1px dashed var(--color-text);
           border-radius: 50%;
+
+          display: block;
+          @media (max-width: 1024px) {
+            margin: auto;
+          }
         }
       }
     }
@@ -219,8 +244,9 @@
         }
       }
       .cols-img {
-        width: 50%;
+        width: 30%;
         text-align: center;
+        margin: auto;
       }
       .row-2 {
         justify-content: flex-end;

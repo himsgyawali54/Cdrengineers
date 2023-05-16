@@ -197,6 +197,18 @@ header {
             }
           }
         }
+        .anzsco-codes-dropdown {
+          @media (min-width: 991px) {
+            &:hover > .dropdown-menu {
+              display: block;
+
+              left: -70%;
+              &:has(.sub-dropdown) {
+                display: flex;
+              }
+            }
+          }
+        }
       }
       .dropdown:hover > .dropdown-menu {
         display: block;
@@ -374,15 +386,22 @@ header {
         &:has(.bi-journal-medical) {
           background-color: #cf8bd4;
         }
+        &:has(.bi-filter-circle) {
+          background-color: #d4be8b;
+        }
       }
       h3 {
         margin: 1.5rem 0 1rem;
       }
       p {
-        text-align: center;
+        text-align: justify;
         font-size: var(--h5-fontsize);
       }
     }
+  }
+  &:last-of-type {
+    display: flex;
+    justify-content: center;
   }
 }
 .call-to-action {
@@ -466,6 +485,12 @@ footer {
       font-size: var(--p-h4-fontsize);
       color: #fff;
     }
+    @media (max-width: 991px) and (min-width: 576px) {
+      left: 9%;
+    }
+    @media (max-width: 576px) {
+      left: 16%;
+    }
   }
   .contact-us {
     background: url("../img/curvy-lines-smooth-blue.svg"),
@@ -496,7 +521,7 @@ footer {
         width: 150px;
         position: absolute;
         bottom: 0;
-        right: -10rem;
+        right: -8rem;
       }
     }
   }
